@@ -31,6 +31,7 @@ for (let i = 0; i < btnLi.length; i++) {
     if (!btnLi[i].classList.contains('vacio')) {
         btnLi[i].addEventListener('click', function () {
             variable = btnLi[i].textContent;
+            console.log(variable);
             modal.classList.remove('hidden');
             overlay.classList.remove('hidden');
             const clase = document.querySelectorAll(`.${btnLi[i].textContent}`);
@@ -53,4 +54,3 @@ overlay.addEventListener('click', cierreFuncion);
 btnCloseModal.addEventListener('click', cierreFuncion);
 
 //For the images
-diceElement.src = `dice-${dice}.png`;
