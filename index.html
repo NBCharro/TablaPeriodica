@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
         <title>La tabla periodica de las cosas</title>
         <script defer src="script.js"></script>
@@ -12,9 +12,15 @@
         <header>
             <h1>La tabla periodica de las cosas</h1>
         </header>
-        <div id="elementos" class="elementos">
-            <ul id="lista">
-                <li class="nometal">H</li>
+        <div class="elementos">
+            <ul>
+                <li
+                    class="elemento nometal"
+                    data-name="Hydrogen"
+                    data-nombre="Hidrogeno"
+                >
+                    H
+                </li>
                 <li class="vacio"></li>
                 <li class="vacio"></li>
                 <li class="vacio"></li>
@@ -31,9 +37,27 @@
                 <li class="vacio"></li>
                 <li class="vacio"></li>
                 <li class="vacio"></li>
-                <li class="gasnoble">He</li>
-                <li class="alcalino">Li</li>
-                <li class="alcalinoterreo">Be</li>
+                <li
+                    class="elemento gasnoble"
+                    data-name="Helium"
+                    data-nombre="Helio"
+                >
+                    He
+                </li>
+                <li
+                    class="elemento alcalino"
+                    data-name="Lithium"
+                    data-nombre="Litio"
+                >
+                    Li
+                </li>
+                <li
+                    class="elemento alcalinoterreo"
+                    data-name="Beryllium"
+                    data-nombre="Berilio"
+                >
+                    Be
+                </li>
                 <li class="vacio"></li>
                 <li class="vacio"></li>
                 <li class="vacio"></li>
@@ -44,14 +68,62 @@
                 <li class="vacio"></li>
                 <li class="vacio"></li>
                 <li class="vacio"></li>
-                <li class="metaloides">B</li>
-                <li class="nometal">C</li>
-                <li class="nometal">N</li>
-                <li class="nometal">O</li>
-                <li class="halogeno">F</li>
-                <li class="gasnoble">Ne</li>
-                <li class="alcalino">Na</li>
-                <li class="alcalinoterreo">Mg</li>
+                <li
+                    class="elemento metaloides"
+                    data-name="Boron"
+                    data-nombre="Boro"
+                >
+                    B
+                </li>
+                <li
+                    class="elemento nometal"
+                    data-name="Carbon"
+                    data-nombre="Carbono"
+                >
+                    C
+                </li>
+                <li
+                    class="elemento nometal"
+                    data-name="Lithium"
+                    data-nombre="Nitrogeno"
+                >
+                    N
+                </li>
+                <li
+                    class="elemento nometal"
+                    data-name="Oxygen"
+                    data-nombre="Oxigeno"
+                >
+                    O
+                </li>
+                <li
+                    class="elemento halogeno"
+                    data-name="Fluorine"
+                    data-nombre="Fluor"
+                >
+                    F
+                </li>
+                <li
+                    class="elemento gasnoble"
+                    data-name="Neon"
+                    data-nombre="Neon"
+                >
+                    Ne
+                </li>
+                <li
+                    class="elemento alcalino"
+                    data-name="Sodium"
+                    data-nombre="Sodio"
+                >
+                    Na
+                </li>
+                <li
+                    class="elemento alcalinoterreo"
+                    data-name="Magnesium"
+                    data-nombre="Magnesio"
+                >
+                    Mg
+                </li>
                 <li class="vacio"></li>
                 <li class="vacio"></li>
                 <li class="vacio"></li>
@@ -62,112 +134,746 @@
                 <li class="vacio"></li>
                 <li class="vacio"></li>
                 <li class="vacio"></li>
-                <li class="metal">Al</li>
-                <li class="metaloides">Si</li>
-                <li class="nometal">P</li>
-                <li class="nometal">S</li>
-                <li class="halogeno">Cl</li>
-                <li class="gasnoble">Ar</li>
-                <li class="alcalino">K</li>
-                <li class="alcalinoterreo">Ca</li>
-                <li class="metal">Sc</li>
-                <li class="metal">Ti</li>
-                <li class="metal">V</li>
-                <li class="metal">Cr</li>
-                <li class="metal">Mn</li>
-                <li class="metal">Fe</li>
-                <li class="metal">Co</li>
-                <li class="metal">Ni</li>
-                <li class="metal">Cu</li>
-                <li class="metal">Zn</li>
-                <li class="metal">Ga</li>
-                <li class="metaloides">Ge</li>
-                <li class="metaloides">As</li>
-                <li class="nometal">Se</li>
-                <li class="halogeno">Br</li>
-                <li class="gasnoble">Kr</li>
-                <li class="alcalino">Rb</li>
-                <li class="alcalinoterreo">Sr</li>
-                <li class="metal">Y</li>
-                <li class="metal">Zr</li>
-                <li class="metal">Nb</li>
-                <li class="metal">Mo</li>
-                <li class="metal">Tc</li>
-                <li class="metal">Ru</li>
-                <li class="metal">Rh</li>
-                <li class="metal">Pd</li>
-                <li class="metal">Ag</li>
-                <li class="metal">Cd</li>
-                <li class="metal">In</li>
-                <li class="metal">Sn</li>
-                <li class="metaloides">Sb</li>
-                <li class="metaloides">Te</li>
-                <li class="halogeno">I</li>
-                <li class="gasnoble">Xe</li>
-                <li class="alcalino">Cs</li>
-                <li class="alcalinoterreo">Ba</li>
-                <li class="metal">Lu</li>
-                <li class="metal">Hf</li>
-                <li class="metal">Ta</li>
-                <li class="metal">W</li>
-                <li class="metal">Re</li>
-                <li class="metal">Os</li>
-                <li class="metal">Ir</li>
-                <li class="metal">Pt</li>
-                <li class="metal">Au</li>
-                <li class="metal">Hg</li>
-                <li class="metal">Tl</li>
-                <li class="metal">Pb</li>
-                <li class="metal">Bi</li>
-                <li class="metaloides">Po</li>
-                <li class="halogeno">At</li>
-                <li class="gasnoble">Rn</li>
-                <li id="Fr" class="alcalino">Fr</li>
-                <li id="Ra" class="alcalinoterreo">Ra</li>
-                <li id="Lr" class="metal">Lr</li>
-                <li id="Rf" class="metal">Rf</li>
-                <li id="Db" class="metal">Db</li>
-                <li id="Sg" class="metal">Sg</li>
-                <li id="Bh" class="metal">Bh</li>
-                <li id="Hs" class="metal">Hs</li>
-                <li id="Mt" class="metal">Mt</li>
-                <li id="Ds" class="metal">Ds</li>
-                <li id="Rg" class="metal">Rg</li>
-                <li id="Cn" class="metal">Cn</li>
-                <li id="Nh" class="metal">Nh</li>
-                <li id="Fl" class="metal">Fl</li>
-                <li id="Mc" class="metal">Mc</li>
-                <li id="Lv" class="metal">Lv</li>
-                <li id="Ts" class="halogeno">Ts</li>
-                <li id="Og" class="gasnoble">Og</li>
+                <li
+                    class="elemento metal"
+                    data-name="Aluminum"
+                    data-nombre="Aluminio"
+                >
+                    Al
+                </li>
+                <li
+                    class="elemento metaloides"
+                    data-name="Silicon"
+                    data-nombre="Silicio"
+                >
+                    Si
+                </li>
+                <li
+                    class="elemento nometal"
+                    data-name="Phosphorus"
+                    data-nombre="Fosforo"
+                >
+                    P
+                </li>
+                <li
+                    class="elemento nometal"
+                    data-name="Sulfur"
+                    data-nombre="Azufre"
+                >
+                    S
+                </li>
+                <li
+                    class="elemento halogeno"
+                    data-name="Chlorine"
+                    data-nombre="Cloro"
+                >
+                    Cl
+                </li>
+                <li
+                    class="elemento gasnoble"
+                    data-name="Argon"
+                    data-nombre="Argón"
+                >
+                    Ar
+                </li>
+                <li
+                    class="elemento alcalino"
+                    data-name="Potassium"
+                    data-nombre="Potasio"
+                >
+                    K
+                </li>
+                <li
+                    class="elemento alcalinoterreo"
+                    data-name="Calcium"
+                    data-nombre="Calcio"
+                >
+                    Ca
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Scandium"
+                    data-nombre="Escandio"
+                >
+                    Sc
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Titanium"
+                    data-nombre="Titanio"
+                >
+                    Ti
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Vanadium"
+                    data-nombre="Vanadio"
+                >
+                    V
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Chromium"
+                    data-nombre="Cromo"
+                >
+                    Cr
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Manganese"
+                    data-nombre="Manganeso"
+                >
+                    Mn
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Iron"
+                    data-nombre="Hierro"
+                >
+                    Fe
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Cobalt"
+                    data-nombre="Cobalto"
+                >
+                    Co
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Nickel"
+                    data-nombre="Niquel"
+                >
+                    Ni
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Copper"
+                    data-nombre="Cobre"
+                >
+                    Cu
+                </li>
+                <li class="elemento metal" data-name="Zinc" data-nombre="Zinc">
+                    Zn
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Gallium"
+                    data-nombre="Galio"
+                >
+                    Ga
+                </li>
+                <li
+                    class="elemento metaloides"
+                    data-name="Germanium"
+                    data-nombre="Germanio"
+                >
+                    Ge
+                </li>
+                <li
+                    class="elemento metaloides"
+                    data-name="Arsenic"
+                    data-nombre="Arsenico"
+                >
+                    As
+                </li>
+                <li
+                    class="elemento nometal"
+                    data-name="Selenium"
+                    data-nombre="Selenio"
+                >
+                    Se
+                </li>
+                <li
+                    class="elemento halogeno"
+                    data-name="Bromine"
+                    data-nombre="Bromo"
+                >
+                    Br
+                </li>
+                <li
+                    class="elemento gasnoble"
+                    data-name="Krypton"
+                    data-nombre="Kripton"
+                >
+                    Kr
+                </li>
+                <li
+                    class="elemento alcalino"
+                    data-name="Rubidium"
+                    data-nombre="Rubidio"
+                >
+                    Rb
+                </li>
+                <li
+                    class="elemento alcalinoterreo"
+                    data-name="Strontium"
+                    data-nombre="Estroncio"
+                >
+                    Sr
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Yttrium"
+                    data-nombre="Itrio"
+                >
+                    Y
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Zirconium"
+                    data-nombre="Circonio"
+                >
+                    Zr
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Niobium"
+                    data-nombre="Niobio"
+                >
+                    Nb
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Molybdenum"
+                    data-nombre="Molibdeno"
+                >
+                    Mo
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Technetium"
+                    data-nombre="Tecnesio"
+                >
+                    Tc
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Ruthenium"
+                    data-nombre="Rutenio"
+                >
+                    Ru
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Rhodium"
+                    data-nombre="Rodio"
+                >
+                    Rh
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Palladium"
+                    data-nombre="Paladio"
+                >
+                    Pd
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Silver"
+                    data-nombre="Plata"
+                >
+                    Ag
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Cadmium"
+                    data-nombre="Cadmio"
+                >
+                    Cd
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Indium"
+                    data-nombre="Indio"
+                >
+                    In
+                </li>
+                <li class="elemento metal" data-name="Tin" data-nombre="Estaño">
+                    Sn
+                </li>
+                <li
+                    class="elemento metaloides"
+                    data-name="Antimony"
+                    data-nombre="Antimonio"
+                >
+                    Sb
+                </li>
+                <li
+                    class="elemento metaloides"
+                    data-name="Tellurium"
+                    data-nombre="Teluro"
+                >
+                    Te
+                </li>
+                <li
+                    class="elemento halogeno"
+                    data-name="Iodine"
+                    data-nombre="Yodo"
+                >
+                    I
+                </li>
+                <li
+                    class="elemento gasnoble"
+                    data-name="Xenon"
+                    data-nombre="Xenon"
+                >
+                    Xe
+                </li>
+                <li
+                    class="elemento alcalino"
+                    data-name="Cesium"
+                    data-nombre="Cesio"
+                >
+                    Cs
+                </li>
+                <li
+                    class="elemento alcalinoterreo"
+                    data-name="Barium"
+                    data-nombre="Bario"
+                >
+                    Ba
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Lutetium"
+                    data-nombre="Lutecio"
+                >
+                    Lu
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Hafnium"
+                    data-nombre="Hafnio"
+                >
+                    Hf
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Tantalum"
+                    data-nombre="Tantalo"
+                >
+                    Ta
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Tungsten"
+                    data-nombre="Wolframio"
+                >
+                    W
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Rhenium"
+                    data-nombre="Renio"
+                >
+                    Re
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Osmium"
+                    data-nombre="Osmio"
+                >
+                    Os
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Iridium"
+                    data-nombre="Iridio"
+                >
+                    Ir
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Platinum"
+                    data-nombre="Platino"
+                >
+                    Pt
+                </li>
+                <li class="elemento metal" data-name="Gold" data-nombre="Oro">
+                    Au
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Mercury"
+                    data-nombre="Mercurio"
+                >
+                    Hg
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Thallium"
+                    data-nombre="Talio"
+                >
+                    Tl
+                </li>
+                <li class="elemento metal" data-name="Lead" data-nombre="Plomo">
+                    Pb
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Bismuth"
+                    data-nombre="Bismuto"
+                >
+                    Bi
+                </li>
+                <li
+                    class="elemento metaloides"
+                    data-name="Polonium"
+                    data-nombre="Polonio"
+                >
+                    Po
+                </li>
+                <li
+                    class="elemento halogeno"
+                    data-name="Astatine"
+                    data-nombre="Astato"
+                >
+                    At
+                </li>
+                <li
+                    class="elemento gasnoble"
+                    data-name="Radon"
+                    data-nombre="Radon"
+                >
+                    Rn
+                </li>
+                <li
+                    class="elemento alcalino"
+                    data-name="Francium"
+                    data-nombre="Francio"
+                >
+                    Fr
+                </li>
+                <li
+                    class="elemento alcalinoterreo"
+                    data-name="Radium"
+                    data-nombre="Radio"
+                >
+                    Ra
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Lawrencium"
+                    data-nombre="Lawrencio"
+                >
+                    Lr
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Rutherfordium"
+                    data-nombre="Ruherfordio"
+                >
+                    Rf
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Dubnium"
+                    data-nombre="Dubnio"
+                >
+                    Db
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Seaborgium"
+                    data-nombre="Seaborgio"
+                >
+                    Sg
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Bohrium"
+                    data-nombre="Bohrio"
+                >
+                    Bh
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Hassium"
+                    data-nombre="Hasio"
+                >
+                    Hs
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Meitnerium"
+                    data-nombre="Meritnerio"
+                >
+                    Mt
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Darmstadtium"
+                    data-nombre="Darmstatio"
+                >
+                    Ds
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Roentgenium"
+                    data-nombre="Roentgenio"
+                >
+                    Rg
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Copernicium"
+                    data-nombre="Copernicio"
+                >
+                    Cn
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Nihonium"
+                    data-nombre="Nihonio"
+                >
+                    Nh
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Flerovium"
+                    data-nombre="Flerovio"
+                >
+                    Fl
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Moscovium"
+                    data-nombre="Moscovio"
+                >
+                    Mc
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Livermorium"
+                    data-nombre="Livermorio"
+                >
+                    Lv
+                </li>
+                <li
+                    class="elemento halogeno"
+                    data-name="Tennessine"
+                    data-nombre="Teneso"
+                >
+                    Ts
+                </li>
+                <li
+                    class="elemento gasnoble"
+                    data-name="Oganesson"
+                    data-nombre="Oganeson"
+                >
+                    Og
+                </li>
+            </ul>
+            <ul>
+                <li class="vacio"></li>
+                <li class="vacio"></li>
+                <li
+                    class="elemento metal"
+                    data-name="Lanthanum"
+                    data-nombre="Lantano"
+                >
+                    La
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Cerium"
+                    data-nombre="Cerio"
+                >
+                    Ce
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Praseodymium"
+                    data-nombre="Praseodimio"
+                >
+                    Pr
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Neodymium"
+                    data-nombre="Neodimio"
+                >
+                    Nd
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Promethium"
+                    data-nombre="Prometio"
+                >
+                    Pm
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Samarium"
+                    data-nombre="Samario"
+                >
+                    Sm
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Europium"
+                    data-nombre="Europio"
+                >
+                    Eu
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Gadolinium"
+                    data-nombre="Gadolinio"
+                >
+                    Gd
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Terbium"
+                    data-nombre="Terbio"
+                >
+                    Tb
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Dysprosium"
+                    data-nombre="Disprosio"
+                >
+                    Dy
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Holmium"
+                    data-nombre="Holmio"
+                >
+                    Ho
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Erbium"
+                    data-nombre="Erbio"
+                >
+                    Er
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Thulium"
+                    data-nombre="Tulio"
+                >
+                    TM
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Ytterbium"
+                    data-nombre="Iterbio"
+                >
+                    Yb
+                </li>
+                <li class="vacio"></li>
+                <li class="vacio"></li>
+                <li class="vacio"></li>
+                <li class="vacio"></li>
+                <li
+                    class="elemento metal"
+                    data-name="Actinium"
+                    data-nombre="Actinio"
+                >
+                    La
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Thorium"
+                    data-nombre="Torio"
+                >
+                    Th
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Protactinium"
+                    data-nombre="Practinio"
+                >
+                    Pa
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Uranium"
+                    data-nombre="Uranio"
+                >
+                    U
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Neptunium"
+                    data-nombre="Neptunio"
+                >
+                    Np
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Plutonium"
+                    data-nombre="Plutonio"
+                >
+                    Pu
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Americium"
+                    data-nombre="Americio"
+                >
+                    Am
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Curium"
+                    data-nombre="Curio"
+                >
+                    Cm
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Berkelium"
+                    data-nombre="Berkelio"
+                >
+                    Bk
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Californium"
+                    data-nombre="Californio"
+                >
+                    Cf
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Einsteinium"
+                    data-nombre="Einstenio"
+                >
+                    Es
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Fermium"
+                    data-nombre="Fermio"
+                >
+                    Fm
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Mendelevium"
+                    data-nombre="Mendelevio"
+                >
+                    Md
+                </li>
+                <li
+                    class="elemento metal"
+                    data-name="Nobelium"
+                    data-nombre="Nobelio"
+                >
+                    No
+                </li>
+                <li class="vacio"></li>
+                <li class="vacio"></li>
             </ul>
         </div>
-        <!--MODAL-->
-        <div class="modal hidden">
-            <button class="close-modal">&times;</button>
-            <h1 class="H hidden">Hidrogeno</h1>
-            <h1 class="He hidden">Helio</h1>
-            <h1 class="Fe hidden">Hierro</h1>
-            <img
-                class="H hidden"
-                src="images/grandes/hidrogenoGrande.jpg"
-                alt="Hidrogeno"
-            />
-            <img
-                class="He hidden"
-                src="images/grandes/helioGrande.jpg"
-                alt="Hidrogeno"
-            />
-            <img
-                class="Fe hidden"
-                src="images/grandes/hierroGrande.jpg"
-                alt="Hidrogeno"
-            />
-            <p class="H hidden">Texto del Hidrogeno</p>
-            <p class="He hidden">Texto del Helio</p>
-            <p class="Fe hidden">Texto del Hierro</p>
+        <div>
+            <button class="probandoCosas">Aprieta fuerte</button>
         </div>
-        <div class="overlay hidden"></div>
-        <!--FINAL MODAL-->
     </body>
 </html>

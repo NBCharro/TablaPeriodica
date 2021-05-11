@@ -1,56 +1,70 @@
 'use strict';
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
-const btnCloseModal = document.querySelector('.close-modal');
-const btnsOpenModal = document.querySelectorAll('.nometal');
+const parent = document.querySelector('.elementos');
+const chemistry = document.querySelectorAll('.elemento');
+const btn = document.querySelector('.probandoCosas');
 
-const closeModal = function () {
-    modal.classList.add('hidden');
-    overlay.classList.add('hidden');
+// Modal
+const createModal = function (data, element) {
+    const markup = `
+    <div class="modal">
+    <button class="close-modal">&times;</button>
+    <h1>${element.dataset.nombre}</h1>
+    <img
+        src="images/grandes/hidrogenoGrande.jpg"
+        alt="${data.name}"
+    />
+    <p>Numero atomico ${data.atomicNumber}</p>
+    <p>Numero masico ${data.atomicMass}</p>
+    <p>Temperatura de fusión ${data.meltingPoint} K</p>
+    <p>Temperatura de ebullición ${data.boilingPoint} K</p>
+    <p>Estado a temperatura ambiente ${data.standardState}</p>
+    <p>Radio atomico ${data.atomicRadius} pm</p>
+    <p>Color CPK #${data.cpkHexColor}</p>
+    <p>Densidad ${data.density} Kg/m3</p>
+    <p>Configuracion electronica ${data.electronicConfiguration}</p>
+    <p>Estados de oxidacion ${data.oxidationStates}</p>
+    <p>Año descubierto ${data.yearDiscovered}</p>
+    <p>Radio de Van der Waals ${data.vanDelWaalsRadius} pm</p>
+    </div>
+    <div class="overlay"></div>`;
+    parent.insertAdjacentHTML('afterbegin', markup);
 };
-const openModal = function () {
-    modal.classList.remove('hidden');
-    overlay.classList.remove('hidden');
-};
 
-for (let i = 0; i < btnsOpenModal.length; i++) {
-    btnsOpenModal[i].addEventListener('click', openModal);
-}
+// Event listener for each element
+chemistry.forEach(box =>
+    box.addEventListener('click', function () {
+        AJAX(box);
+    })
+);
 
-//btnCloseModal.addEventListener('click', closeModal);
-//overlay.addEventListener('click', closeModal);
-document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-        closeModal();
+// Close modal
+parent.addEventListener('click', function (e) {
+    const deleting = function () {
+        document.querySelector('.modal').remove();
+        document.querySelector('.overlay').remove();
+    };
+    if (e.target.className === 'close-modal') {
+        deleting();
+    }
+    if (e.target.className === 'overlay') {
+        deleting();
     }
 });
-// PRUEBAS
-const btnLi = document.querySelectorAll('li');
-let variable;
-for (let i = 0; i < btnLi.length; i++) {
-    if (!btnLi[i].classList.contains('vacio')) {
-        btnLi[i].addEventListener('click', function () {
-            variable = btnLi[i].textContent;
-            console.log(variable);
-            modal.classList.remove('hidden');
-            overlay.classList.remove('hidden');
-            const clase = document.querySelectorAll(`.${btnLi[i].textContent}`);
-            for (let i = 0; i < clase.length; i++) {
-                clase[i].classList.remove('hidden');
-            }
-        });
+
+// API call
+const AJAX = async function (element) {
+    try {
+        console.log(element.dataset.nombre);
+        const url = `https://periodic-table-api.herokuapp.com/atomicName/${element.dataset.name}`;
+        const res = await fetch(url);
+        const data = await res.json();
+        console.log(data);
+        createModal(data, element);
+    } catch (err) {
+        console.error(err);
     }
-}
-const cierreFuncion = function () {
-    const cierre = document.querySelectorAll(`.${variable}`);
-    for (let i = 0; i < cierre.length; i++) {
-        cierre[i].classList.add('hidden');
-    }
-    modal.classList.add('hidden');
-    overlay.classList.add('hidden');
 };
 
-overlay.addEventListener('click', cierreFuncion);
-btnCloseModal.addEventListener('click', cierreFuncion);
-
-//For the images
+btn.addEventListener('click', function () {
+    AJAX('lithium');
+});
