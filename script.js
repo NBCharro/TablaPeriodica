@@ -1,4 +1,5 @@
-'use strict';
+('use strict');
+
 const parent = document.querySelector('.elementos');
 const chemistry = document.querySelectorAll('.elemento');
 const btn = document.querySelector('.probandoCosas');
@@ -27,6 +28,16 @@ const createModal = function (data, element) {
     <p>Radio de Van der Waals ${data.vanDelWaalsRadius} pm</p>
     </div>
     <div class="overlay"></div>`;
+    parent.insertAdjacentHTML('afterbegin', markup);
+};
+
+// Spinner
+const renderSpinner = function () {
+    const markup = `
+    <div class="spinner">
+        <img src="images/loading.png" alt="loading" />
+    </div>
+    `;
     parent.insertAdjacentHTML('afterbegin', markup);
 };
 
@@ -66,5 +77,5 @@ const AJAX = async function (element) {
 };
 
 btn.addEventListener('click', function () {
-    AJAX('lithium');
+    renderSpinner();
 });
