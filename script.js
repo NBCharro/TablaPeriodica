@@ -1,4 +1,4 @@
-('use strict');
+'use strict';
 
 const parent = document.querySelector('.elementos');
 const chemistry = document.querySelectorAll('.elemento');
@@ -6,6 +6,8 @@ const btn = document.querySelector('.probandoCosas');
 
 // Modal
 const createModal = function (data, element) {
+    const vacio = (valor, unidades = '') =>
+        valor === '' ? 'Desconocido' : valor + ' ' + unidades;
     const markup = `
     <div class="modal">
     <button class="close-modal">&times;</button>
@@ -14,18 +16,18 @@ const createModal = function (data, element) {
         src="images/grandes/hidrogenoGrande.jpg"
         alt="${data.name}"
     />
-    <p>Numero atomico ${data.atomicNumber}</p>
-    <p>Numero masico ${data.atomicMass}</p>
-    <p>Temperatura de fusión ${data.meltingPoint} K</p>
-    <p>Temperatura de ebullición ${data.boilingPoint} K</p>
-    <p>Estado a temperatura ambiente ${data.standardState}</p>
-    <p>Radio atomico ${data.atomicRadius} pm</p>
-    <p>Color CPK #${data.cpkHexColor}</p>
-    <p>Densidad ${data.density} Kg/m3</p>
-    <p>Configuracion electronica ${data.electronicConfiguration}</p>
-    <p>Estados de oxidacion ${data.oxidationStates}</p>
-    <p>Año descubierto ${data.yearDiscovered}</p>
-    <p>Radio de Van der Waals ${data.vanDelWaalsRadius} pm</p>
+    <p>Numero atomico ${vacio(data.atomicNumber)}</p>
+    <p>Numero masico ${vacio(data.atomicMass)}</p>
+    <p>Temperatura de fusión ${vacio(data.meltingPoint, 'K')}</p>
+    <p>Temperatura de ebullición ${vacio(data.boilingPoint, 'K')}</p>
+    <p>Estado a temperatura ambiente ${vacio(data.standardState)}</p>
+    <p>Radio atomico ${vacio(data.atomicRadius, 'pm')}</p>
+    <p>Color CPK #${vacio(data.cpkHexColor)}</p>
+    <p>Densidad ${vacio(data.density, 'Kg/m3')}</p>
+    <p>Configuracion electronica ${vacio(data.electronicConfiguration)}</p>
+    <p>Estados de oxidacion ${vacio(data.oxidationStates)}</p>
+    <p>Año descubierto ${vacio(data.yearDiscovered)}</p>
+    <p>Radio de Van der Waals ${vacio(data.vanDelWaalsRadius, 'pm')}</p>
     </div>
     <div class="overlay"></div>`;
     parent.insertAdjacentHTML('afterbegin', markup);
@@ -39,6 +41,7 @@ const renderSpinner = function () {
     </div>
     `;
     parent.insertAdjacentHTML('afterbegin', markup);
+    console.log('Spinner');
 };
 
 // Event listener for each element
