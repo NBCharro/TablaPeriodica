@@ -79,6 +79,20 @@ const AJAX = async function (element) {
     }
 };
 
+// Pruebas
+const probandoloading = function () {
+    const markup = `
+    <div class="modal">
+        <button class="close-modal">&times;</button>
+        <div class="spinner">
+            <img src="images/loading.png" alt="loading" />
+        </div>
+    </div>
+    <div class="overlay"></div>`;
+    parent.insertAdjacentHTML('afterbegin', markup);
+};
+
 btn.addEventListener('click', function () {
-    renderSpinner();
+    // renderSpinner();
+    probandoloading();
 });
