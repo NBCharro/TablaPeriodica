@@ -5,17 +5,24 @@
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
-header {
-    background-color: cyan;
-    height: 75px;
+body {
+    min-width: 1065;
 }
-header h1 {
-    padding-top: 15px;
+header {
+    border: 2px solid black;
 }
 .vacio {
     background-color: #fff;
     border: 0px;
 }
+.hidden {
+    display: none;
+}
+.espacio {
+    height: 40px;
+}
+
+/* SPINNER */
 .spinner img {
     width: 200px;
     height: 200px;
@@ -29,9 +36,6 @@ header h1 {
     to {
         transform: rotate(359deg);
     }
-}
-.hidden {
-    display: none;
 }
 
 /*ELEMENTOS*/

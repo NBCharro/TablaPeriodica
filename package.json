@@ -1,0 +1,29 @@
+{
+    "name": "tablaperiodica",
+    "version": "1.0.0",
+    "description": "",
+    "main": "script.js",
+    "scripts": {
+        "start": "parcel index.html",
+        "build": "parcel build index.html --dist-dir ./dist"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NBCharro/TablaPeriodica.git"
+    },
+    "author": "NB Charro",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/NBCharro/TablaPeriodica/issues"
+    },
+    "homepage": "https://github.com/NBCharro/TablaPeriodica#readme",
+    "dependencies": {
+        "core-js": "^3.12.1",
+        "parcel": "^2.0.0-beta.2",
+        "regenerator-runtime": "^0.13.7",
+        "sass": "^1.32.13"
+    },
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.0.0-beta.2"
+    }
+}

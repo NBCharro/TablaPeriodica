@@ -4,6 +4,20 @@ const parent = document.querySelector('.elementos');
 const chemistry = document.querySelectorAll('.elemento');
 const btn = document.querySelector('.probandoCosas');
 
+// Spinner
+const renderSpinner = function () {
+    const markup = `
+    <div class="modal">
+        <button class="close-modal">&times;</button>
+        <div class="spinner">
+            <img src="images/loading.png" alt="loading" />
+        </div>
+    </div>
+    <div class="overlay"></div>`;
+    parent.insertAdjacentHTML('afterbegin', markup);
+    console.log('Spinner');
+};
+
 // Modal
 const createModal = function (data, element) {
     const vacio = (valor, unidades = '') =>
@@ -33,15 +47,9 @@ const createModal = function (data, element) {
     parent.insertAdjacentHTML('afterbegin', markup);
 };
 
-// Spinner
-const renderSpinner = function () {
-    const markup = `
-    <div class="spinner">
-        <img src="images/loading.png" alt="loading" />
-    </div>
-    `;
-    parent.insertAdjacentHTML('afterbegin', markup);
-    console.log('Spinner');
+const deleteModal = function () {
+    document.querySelector('.modal').remove();
+    document.querySelector('.overlay').remove();
 };
 
 // Event listener for each element
@@ -53,25 +61,23 @@ chemistry.forEach(box =>
 
 // Close modal
 parent.addEventListener('click', function (e) {
-    const deleting = function () {
-        document.querySelector('.modal').remove();
-        document.querySelector('.overlay').remove();
-    };
     if (e.target.className === 'close-modal') {
-        deleting();
+        deleteModal();
     }
     if (e.target.className === 'overlay') {
-        deleting();
+        deleteModal();
     }
 });
 
 // API call
 const AJAX = async function (element) {
     try {
+        renderSpinner();
         console.log(element.dataset.nombre);
         const url = `https://periodic-table-api.herokuapp.com/atomicName/${element.dataset.name}`;
         const res = await fetch(url);
         const data = await res.json();
+        deleteModal();
         console.log(data);
         createModal(data, element);
     } catch (err) {
@@ -80,19 +86,7 @@ const AJAX = async function (element) {
 };
 
 // Pruebas
-const probandoloading = function () {
-    const markup = `
-    <div class="modal">
-        <button class="close-modal">&times;</button>
-        <div class="spinner">
-            <img src="images/loading.png" alt="loading" />
-        </div>
-    </div>
-    <div class="overlay"></div>`;
-    parent.insertAdjacentHTML('afterbegin', markup);
-};
 
 btn.addEventListener('click', function () {
-    // renderSpinner();
-    probandoloading();
+    renderSpinner();
 });
