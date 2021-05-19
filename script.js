@@ -1,4 +1,5 @@
 'use strict';
+// import 'regenerator-runtime';
 
 const parent = document.querySelector('.elementos');
 const chemistry = document.querySelectorAll('.elemento');
@@ -10,7 +11,7 @@ const renderSpinner = function () {
     <div class="modal">
         <button class="close-modal">&times;</button>
         <div class="spinner">
-            <img src="images/loading.png" alt="loading" />
+            <img src="images/Loading.png" alt="loading" />
         </div>
     </div>
     <div class="overlay"></div>`;
@@ -87,6 +88,16 @@ const AJAX = async function (element) {
 
 // Pruebas
 
+const insertarImagen = function () {
+    const imagen = '<img src="/images/Loading.png" alt="Cargando" />';
+    parent.insertAdjacentHTML('beforeend', imagen);
+};
+
 btn.addEventListener('click', function () {
-    renderSpinner();
+    // renderSpinner();
+    insertarImagen();
+});
+
+window.addEventListener('load', event => {
+    insertarImagen();
 });

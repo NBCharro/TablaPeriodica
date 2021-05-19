@@ -1,0 +1,14 @@
+header {
+    border: 5px solid green;
+    background-image: url($bg-header);
+    @include center-bg;
+    h1 {
+        font-size: 3em;
+        color: $color-header;
+        text-shadow: 3px 2px red;
+        text-align: center;
+        vertical-align: middle;
+        line-height: $height-header;
+    }
+    height: $height-header;
+}

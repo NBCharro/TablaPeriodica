@@ -1,0 +1,17 @@
+// Images
+$bg-header: '/images/background.jpg';
+
+// Colors
+$color1: #fff;
+$color-header: white;
+
+// Styles
+@mixin center-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// Heights and widths
+$height-header: 500px;
+$width-page-min: 1024px;
+$width-page-max: 1024px;
