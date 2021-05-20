@@ -1,14 +1,29 @@
 header {
-    border: 5px solid green;
     background-image: url($bg-header);
     @include center-bg;
     h1 {
         font-size: 3em;
+        font-family: sans-serif;
         color: $color-header;
-        text-shadow: 3px 2px red;
+        animation: pulsate 1.5s infinite alternate;
         text-align: center;
         vertical-align: middle;
         line-height: $height-header;
     }
     height: $height-header;
+}
+@keyframes pulsate {
+    100% {
+        text-shadow: 0 0 4px $color-bg, 0 0 11px $color-bg, 0 0 19px $color-bg,
+            0 0 40px $color-header-shadow, 0 0 80px $color-header-shadow,
+            0 0 90px $color-header-shadow, 0 0 100px $color-header-shadow,
+            0 0 150px $color-header-shadow;
+    }
+
+    0% {
+        text-shadow: 0 0 2px $color-bg, 0 0 4px $color-bg, 0 0 6px $color-bg,
+            0 0 10px $color-header-shadow, 0 0 45px $color-header-shadow,
+            0 0 55px $color-header-shadow, 0 0 70px $color-header-shadow,
+            0 0 80px $color-header-shadow;
+    }
 }

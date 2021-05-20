@@ -5,8 +5,11 @@
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
+body {
+    min-width: $width-page-min;
+}
 .vacio {
-    background-color: #fff;
+    background-color: $color-bg;
     border: 0px;
 }
 .hidden {

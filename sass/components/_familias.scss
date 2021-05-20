@@ -1,34 +1,34 @@
 .alcalino {
-    background-color: salmon;
+    background-color: $color-alcalino;
+}
+.otrosmetales {
+    background-color: $color-otrosmetales;
 }
 .alcalinoterreo {
-    background-color: orange;
+    background-color: $color-alcalinoterreo;
 }
 .metaloides {
-    background-color: green;
+    background-color: $color-metaloides;
 }
 .nometal {
-    background-color: violet;
-}
-.halogeno {
-    background-color: pink;
+    background-color: $color-nometal;
 }
 .gasnoble {
-    background-color: cyan;
+    background-color: $color-gasnoble;
 }
 .metal {
-    background-color: paleturquoise;
+    background-color: $color-metal;
 }
 .lantanidos {
-    background-color: cyan;
+    background-color: $color-lantanidos;
 }
 .actinidos {
-    background-color: darkcyan;
+    background-color: $color-actinidos;
 }
 .periodo {
     .vacio:hover {
-        background-color: white;
+        background-color: $color-bg;
         cursor: auto;
-        box-shadow: 0 0px 5px 1px white;
+        box-shadow: 0 0px 5px 1px $color-bg;
     }
 }

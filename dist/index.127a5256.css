@@ -6,8 +6,12 @@
   text-align: center;
 }
 
+body {
+  min-width: 1065px;
+}
+
 .vacio {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 0px;
 }
 
@@ -20,79 +24,134 @@
 }
 
 header {
-  border: 5px solid green;
   background-image: url("background.d08dcebd.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  height: 500px;
+  height: 400px;
 }
 
 header h1 {
   font-size: 3em;
-  color: white;
-  text-shadow: 3px 2px red;
+  font-family: sans-serif;
+  color: #219ebc;
+  animation: pulsate 1.5s infinite alternate;
   text-align: center;
   vertical-align: middle;
-  line-height: 500px;
+  line-height: 400px;
+}
+
+@keyframes pulsate {
+  100% {
+    text-shadow: 0 0 4px #ffffff, 0 0 11px #ffffff, 0 0 19px #ffffff, 0 0 40px #8ecae6, 0 0 80px #8ecae6, 0 0 90px #8ecae6, 0 0 100px #8ecae6, 0 0 150px #8ecae6;
+  }
+  0% {
+    text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #ffffff, 0 0 10px #8ecae6, 0 0 45px #8ecae6, 0 0 55px #8ecae6, 0 0 70px #8ecae6, 0 0 80px #8ecae6;
+  }
 }
 
 .periodo {
-  max-width: 1200px;
   margin-top: 5px;
 }
 
 .periodo button {
   width: 50px;
-  height: 50px;
+  height: 65px;
   font-size: 16px;
 }
 
 .periodo button:hover {
-  background-color: yellow;
   cursor: pointer;
-  box-shadow: 0 1px 5px 1px royalblue;
+  transition: 0.5s ease-in-out;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+.periodo .otrosmetales:hover {
+  background: #b5e5b0;
+  box-shadow: 0 0 20px 0 #76eb6a inset, 0 0 20px 10px #76eb6a;
+}
+
+.periodo .alcalino:hover {
+  background: #e5aeab;
+  box-shadow: 0 0 20px 0 #e67771 inset, 0 0 20px 10px #e67771;
+}
+
+.periodo .alcalinoterreo:hover {
+  background: #bdbfe3;
+  box-shadow: 0 0 20px 0 #797edd inset, 0 0 20px 10px #797edd;
+}
+
+.periodo .metaloides:hover {
+  background: #c8d5af;
+  box-shadow: 0 0 20px 0 #aad162 inset, 0 0 20px 10px #aad162;
+}
+
+.periodo .nometal:hover {
+  background: #e1e1ab;
+  box-shadow: 0 0 20px 0 #e0e05d inset, 0 0 20px 10px #e0e05d;
+}
+
+.periodo .gasnoble:hover {
+  background: #e8d9ce;
+  box-shadow: 0 0 20px 0 #e7ac82 inset, 0 0 20px 10px #e7ac82;
+}
+
+.periodo .metal:hover {
+  background: #adc9ee;
+  box-shadow: 0 0 20px 0 #619dec inset, 0 0 20px 10px #619dec;
+}
+
+.periodo .lantanidos:hover {
+  background: #b2eded;
+  box-shadow: 0 0 20px 0 #47f0f0 inset, 0 0 20px 10px #47f0f0;
+}
+
+.periodo .actinidos:hover {
+  background: #a7d8c5;
+  box-shadow: 0 0 20px 0 #42d89e inset, 0 0 20px 10px #42d89e;
 }
 
 .alcalino {
-  background-color: salmon;
+  background-color: #ffcac7;
+}
+
+.otrosmetales {
+  background-color: #cbffc5;
 }
 
 .alcalinoterreo {
-  background-color: orange;
+  background-color: #d1d3ff;
 }
 
 .metaloides {
-  background-color: green;
+  background-color: #deeec0;
 }
 
 .nometal {
-  background-color: violet;
-}
-
-.halogeno {
-  background-color: pink;
+  background-color: #ffffc7;
 }
 
 .gasnoble {
-  background-color: cyan;
+  background-color: #ffe2c0;
 }
 
 .metal {
-  background-color: paleturquoise;
+  background-color: #c2ddff;
 }
 
 .lantanidos {
-  background-color: cyan;
+  background-color: #c0ffff;
 }
 
 .actinidos {
-  background-color: darkcyan;
+  background-color: #c7ffea;
 }
 
 .periodo .vacio:hover {
-  background-color: white;
+  background-color: #ffffff;
   cursor: auto;
-  box-shadow: 0 0px 5px 1px white;
+  box-shadow: 0 0px 5px 1px #ffffff;
 }
 
 .modal {

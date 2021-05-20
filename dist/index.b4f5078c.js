@@ -388,7 +388,7 @@ const chemistry = document.querySelectorAll('.elemento');
 const btn = document.querySelector('.probandoCosas');
 // Spinner
 const renderSpinner = function() {
-    const markup = `\n    <div class="modal">\n        <button class="close-modal">&times;</button>\n        <div class="spinner">\n            <img src="images/Loading.png" alt="loading" />\n        </div>\n    </div>\n    <div class="overlay"></div>`;
+    const markup = `\n    <div class="modal">\n        <button class="close-modal">&times;</button>\n        <div class="spinner">\n            <img src="/images/Loading.png" alt="loading" />\n        </div>\n    </div>\n    <div class="overlay"></div>`;
     parent.insertAdjacentHTML('afterbegin', markup);
     console.log('Spinner');
 };

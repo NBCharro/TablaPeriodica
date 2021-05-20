@@ -2,8 +2,36 @@
 $bg-header: '/images/background.jpg';
 
 // Colors
-$color1: #fff;
-$color-header: white;
+$color-header: #219ebc;
+$color-header-shadow: #8ecae6;
+$color-bg: #ffffff;
+$color-alcalino: #ffcac7;
+$color-alcalino-hover: #e5aeab;
+$color-alcalino-shadow: #e67771;
+$color-alcalinoterreo: #d1d3ff;
+$color-alcalinoterreo-hover: #bdbfe3;
+$color-alcalinoterreo-shadow: #797edd;
+$color-metaloides: #deeec0;
+$color-metaloides-hover: #c8d5af;
+$color-metaloides-shadow: #aad162;
+$color-nometal: #ffffc7;
+$color-nometal-hover: #e1e1ab;
+$color-nometal-shadow: #e0e05d;
+$color-otrosmetales: #cbffc5;
+$color-otrosmetales-hover: #b5e5b0;
+$color-otrosmetales-shadow: #76eb6a;
+$color-gasnoble: #ffe2c0;
+$color-gasnoble-hover: #e8d9ce;
+$color-gasnoble-shadow: #e7ac82;
+$color-metal: #c2ddff;
+$color-metal-hover: #adc9ee;
+$color-metal-shadow: #619dec;
+$color-lantanidos: #c0ffff;
+$color-lantanidos-hover: #b2eded;
+$color-lantanidos-shadow: #47f0f0;
+$color-actinidos: #c7ffea;
+$color-actinidos-hover: #a7d8c5;
+$color-actinidos-shadow: #42d89e;
 
 // Styles
 @mixin center-bg {
@@ -12,6 +40,6 @@ $color-header: white;
 }
 
 // Heights and widths
-$height-header: 500px;
-$width-page-min: 1024px;
+$height-header: 400px;
+$width-page-min: 1065px;
 $width-page-max: 1024px;
