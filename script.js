@@ -11,7 +11,7 @@ const renderSpinner = function () {
     <div class="modal">
         <button class="close-modal">&times;</button>
         <div class="spinner">
-            <img src="images/Loading.png" alt="loading" />
+            <img src="/images/Loading.png" alt="loading" />
         </div>
     </div>
     <div class="overlay"></div>`;
