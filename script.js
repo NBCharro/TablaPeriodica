@@ -88,16 +88,6 @@ const AJAX = async function (element) {
 
 // Pruebas
 
-const insertarImagen = function () {
-    const imagen = '<img src="/images/Loading.png" alt="Cargando" />';
-    parent.insertAdjacentHTML('beforeend', imagen);
-};
-
 btn.addEventListener('click', function () {
-    // renderSpinner();
-    insertarImagen();
-});
-
-window.addEventListener('load', event => {
-    insertarImagen();
+    renderSpinner();
 });
