@@ -8,6 +8,7 @@
 
 body {
   min-width: 1065px;
+  background: linear-gradient(90deg, #8ec5fc 35%, #ddbdfc 100%);
 }
 
 .vacio {
@@ -44,7 +45,7 @@ header h1 {
 
 @keyframes pulsate {
   100% {
-    text-shadow: 0 0 4px #ffffff, 0 0 11px #ffffff, 0 0 19px #ffffff, 0 0 40px #8ecae6, 0 0 80px #8ecae6, 0 0 90px #8ecae6, 0 0 100px #8ecae6, 0 0 150px #8ecae6;
+    text-shadow: 0 0 4px #ffffff 0 0 11px #ffffff, 0 0 19px #ffffff, 0 0 40px #8ecae6, 0 0 80px #8ecae6, 0 0 90px #8ecae6, 0 0 100px #8ecae6, 0 0 150px #8ecae6;
   }
   0% {
     text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #ffffff, 0 0 10px #8ecae6, 0 0 45px #8ecae6, 0 0 55px #8ecae6, 0 0 70px #8ecae6, 0 0 80px #8ecae6;
@@ -170,7 +171,6 @@ header h1 {
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
-  background-color: #fefae0;
 }
 
 .overlay {

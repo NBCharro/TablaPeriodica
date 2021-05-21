@@ -7,9 +7,10 @@
 }
 body {
     min-width: $width-page-min;
+    background: linear-gradient(90deg, $color-bg-izq 35%, $color-bg-der 100%);
 }
 .vacio {
-    background-color: $color-bg;
+    background-color: $color-text;
     border: 0px;
     visibility: hidden;
 }

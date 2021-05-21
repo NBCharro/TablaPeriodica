@@ -15,16 +15,16 @@ header {
 }
 @keyframes pulsate {
     100% {
-        text-shadow: 0 0 4px $color-bg, 0 0 11px $color-bg, 0 0 19px $color-bg,
-            0 0 40px $color-header-shadow, 0 0 80px $color-header-shadow,
-            0 0 90px $color-header-shadow, 0 0 100px $color-header-shadow,
-            0 0 150px $color-header-shadow;
+        text-shadow: 0 0 4px $color-text 0 0 11px $color-text,
+            0 0 19px $color-text, 0 0 40px $color-header-shadow,
+            0 0 80px $color-header-shadow, 0 0 90px $color-header-shadow,
+            0 0 100px $color-header-shadow, 0 0 150px $color-header-shadow;
     }
 
     0% {
-        text-shadow: 0 0 2px $color-bg, 0 0 4px $color-bg, 0 0 6px $color-bg,
-            0 0 10px $color-header-shadow, 0 0 45px $color-header-shadow,
-            0 0 55px $color-header-shadow, 0 0 70px $color-header-shadow,
-            0 0 80px $color-header-shadow;
+        text-shadow: 0 0 2px $color-text, 0 0 4px $color-text,
+            0 0 6px $color-text, 0 0 10px $color-header-shadow,
+            0 0 45px $color-header-shadow, 0 0 55px $color-header-shadow,
+            0 0 70px $color-header-shadow, 0 0 80px $color-header-shadow;
     }
 }

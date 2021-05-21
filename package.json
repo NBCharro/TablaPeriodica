@@ -1,8 +1,7 @@
 {
     "name": "tablaperiodica",
     "version": "1.0.0",
-    "description": "",
-    "main": "script.js",
+    "main": "index.html",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "parcel index.html",
@@ -23,5 +22,6 @@
     },
     "devDependencies": {
         "@parcel/transformer-sass": "^2.0.0-nightly.667"
-    }
+    },
+    "description": ""
 }

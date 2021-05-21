@@ -27,8 +27,8 @@
 }
 .periodo {
     .vacio:hover {
-        background-color: $color-bg;
+        background-color: $color-text;
         cursor: auto;
-        box-shadow: 0 0px 5px 1px $color-bg;
+        box-shadow: 0 0px 5px 1px $color-text;
     }
 }
