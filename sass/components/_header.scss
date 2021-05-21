@@ -2,6 +2,7 @@ header {
     background-image: url($bg-header);
     @include center-bg;
     h1 {
+        font-family: 'Goblin One', cursive;
         font-size: 3em;
         font-family: sans-serif;
         color: $color-header;

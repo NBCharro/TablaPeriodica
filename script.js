@@ -1,5 +1,5 @@
 'use strict';
-// import 'regenerator-runtime';
+import 'regenerator-runtime';
 
 const parent = document.querySelector('.elementos');
 const chemistry = document.querySelectorAll('.elemento');
@@ -16,33 +16,63 @@ const renderSpinner = function () {
     </div>
     <div class="overlay"></div>`;
     parent.insertAdjacentHTML('afterbegin', markup);
-    console.log('Spinner');
 };
 
 // Modal
 const createModal = function (data, element) {
     const vacio = (valor, unidades = '') =>
         valor === '' ? 'Desconocido' : valor + ' ' + unidades;
+    const imagen = element.dataset.nombre.toLowerCase();
     const markup = `
     <div class="modal">
     <button class="close-modal">&times;</button>
-    <h1>${element.dataset.nombre}</h1>
+    <h1 class="titulo-modal">${element.dataset.nombre}</h1>
     <img
-        src="images/grandes/hidrogenoGrande.jpg"
-        alt="${data.name}"
+        src="/images/elementos/${imagen}.png"
+        alt="${element.dataset.nombre}"
+        class="imagen-modal"
     />
-    <p>Numero atomico ${vacio(data.atomicNumber)}</p>
-    <p>Numero masico ${vacio(data.atomicMass)}</p>
-    <p>Temperatura de fusión ${vacio(data.meltingPoint, 'K')}</p>
-    <p>Temperatura de ebullición ${vacio(data.boilingPoint, 'K')}</p>
-    <p>Estado a temperatura ambiente ${vacio(data.standardState)}</p>
-    <p>Radio atomico ${vacio(data.atomicRadius, 'pm')}</p>
-    <p>Color CPK #${vacio(data.cpkHexColor)}</p>
-    <p>Densidad ${vacio(data.density, 'Kg/m3')}</p>
-    <p>Configuracion electronica ${vacio(data.electronicConfiguration)}</p>
-    <p>Estados de oxidacion ${vacio(data.oxidationStates)}</p>
-    <p>Año descubierto ${vacio(data.yearDiscovered)}</p>
-    <p>Radio de Van der Waals ${vacio(data.vanDelWaalsRadius, 'pm')}</p>
+    <p class="texto-modal">Número atómico <h5 class="valor">${vacio(
+        data.atomicNumber
+    )}</h5></p>
+    <p class="texto-modal">Número másico <h5 class="valor">${vacio(
+        data.atomicMass
+    )}</h5></p>
+    <p class="texto-modal">Temperatura de fusión <h5 class="valor">${vacio(
+        data.meltingPoint,
+        'K'
+    )}</h5></p>
+    <p class="texto-modal">Temperatura de ebullición <h5 class="valor">${vacio(
+        data.boilingPoint,
+        'K'
+    )}</h5></p>
+    <p class="texto-modal">Estado a temperatura ambiente <h5 class="valor">${vacio(
+        data.standardState
+    )}</h5></p>
+    <p class="texto-modal">Radio atómico <h5 class="valor">${vacio(
+        data.atomicRadius,
+        'pm'
+    )}</h5></p>
+    <p class="texto-modal">Color CPK <h5 class="valor">#${vacio(
+        data.cpkHexColor
+    )}</h5></p>
+    <p class="texto-modal">Densidad <h5 class="valor">${vacio(
+        data.density,
+        'Kg/m3'
+    )}</h5></p>
+    <p class="texto-modal">Configuracion electronica <h5 class="valor">${vacio(
+        data.electronicConfiguration
+    )}</h5></p>
+    <p class="texto-modal">Estados de oxidación <h5 class="valor">${vacio(
+        data.oxidationStates
+    )}</h5></p>
+    <p class="texto-modal">Año descubierto <h5 class="valor">${vacio(
+        data.yearDiscovered
+    )}</h5></p>
+    <p class="texto-modal">Radio de Van der Waals <h5 class="valor">${vacio(
+        data.vanDelWaalsRadius,
+        'pm'
+    )}</h5></p>
     </div>
     <div class="overlay"></div>`;
     parent.insertAdjacentHTML('afterbegin', markup);
@@ -74,20 +104,12 @@ parent.addEventListener('click', function (e) {
 const AJAX = async function (element) {
     try {
         renderSpinner();
-        console.log(element.dataset.nombre);
         const url = `https://periodic-table-api.herokuapp.com/atomicName/${element.dataset.name}`;
         const res = await fetch(url);
         const data = await res.json();
         deleteModal();
-        console.log(data);
         createModal(data, element);
     } catch (err) {
         console.error(err);
     }
 };
-
-// Pruebas
-
-btn.addEventListener('click', function () {
-    renderSpinner();
-});

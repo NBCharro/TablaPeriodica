@@ -3,7 +3,8 @@
     button {
         width: 50px;
         height: 65px;
-        font-size: 16px;
+        font-size: $texto-pixels;
+        font-family: 'Crimson Text', serif;
     }
     button:hover {
         cursor: pointer;

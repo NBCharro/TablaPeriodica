@@ -11,6 +11,7 @@ body {
 .vacio {
     background-color: $color-bg;
     border: 0px;
+    visibility: hidden;
 }
 .hidden {
     display: none;

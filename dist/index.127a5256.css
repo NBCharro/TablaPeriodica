@@ -13,6 +13,7 @@ body {
 .vacio {
   background-color: #ffffff;
   border: 0px;
+  visibility: hidden;
 }
 
 .hidden {
@@ -31,6 +32,7 @@ header {
 }
 
 header h1 {
+  font-family: "Goblin One", cursive;
   font-size: 3em;
   font-family: sans-serif;
   color: #219ebc;
@@ -56,7 +58,8 @@ header h1 {
 .periodo button {
   width: 50px;
   height: 65px;
-  font-size: 16px;
+  font-size: 18px;
+  font-family: "Crimson Text", serif;
 }
 
 .periodo button:hover {
@@ -162,11 +165,12 @@ header h1 {
   min-width: 500px;
   min-height: 500px;
   font-size: 16px;
-  background-color: white;
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
+  background-color: #fefae0;
 }
 
 .overlay {
@@ -185,8 +189,8 @@ header h1 {
   padding: 1.75rem 3.5rem;
   margin: 5rem 2rem;
   border: none;
-  background-color: #fff;
-  color: #444;
+  background-color: #ffffff;
+  color: #000000;
   border-radius: 10rem;
   cursor: pointer;
 }
@@ -196,10 +200,31 @@ header h1 {
   top: 1.2rem;
   right: 2rem;
   font-size: 5rem;
-  color: #333;
+  color: #000000;
   cursor: pointer;
   border: none;
   background: none;
+}
+
+.titulo-modal {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  font-family: "Pattaya", sans-serif;
+}
+
+.texto-modal {
+  font-family: "KoHo", sans-serif;
+  font-size: 1.2em;
+}
+
+.valor {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+}
+
+.imagen-modal {
+  width: 400px;
+  height: 400px;
 }
 
 .spinner img {

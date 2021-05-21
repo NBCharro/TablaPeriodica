@@ -1,10 +1,12 @@
 // Images
 $bg-header: '/images/background.jpg';
 
-// Colors
+// General colors
 $color-header: #219ebc;
 $color-header-shadow: #8ecae6;
 $color-bg: #ffffff;
+
+// Elements colors
 $color-alcalino: #ffcac7;
 $color-alcalino-hover: #e5aeab;
 $color-alcalino-shadow: #e67771;
@@ -43,3 +45,10 @@ $color-actinidos-shadow: #42d89e;
 $height-header: 400px;
 $width-page-min: 1065px;
 $width-page-max: 1024px;
+$texto-pixels: 18px;
+
+// Modal Colors
+$modal-bg: #fefae0;
+$modal-box-shadow: rgba(0, 0, 0, 0.3);
+$overlay-background-color: rgba(0, 0, 0, 0.6);
+$close-modal: #000000;
