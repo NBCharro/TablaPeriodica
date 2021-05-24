@@ -113,3 +113,17 @@ const AJAX = async function (element) {
         console.error(err);
     }
 };
+
+// Pruebas con imagen
+const boton = document.querySelector('.boton-imagen');
+const prueba = function () {
+    const img = new Image();
+    img.src = 'images/loading.png';
+    parent.appendChild(img);
+    console.log(img);
+    var img2 = document.createElement('img');
+    img2.src = 'images/loading.png';
+    parent.appendChild(img2);
+    console.log(img2);
+};
+console.log('Fixing show images');

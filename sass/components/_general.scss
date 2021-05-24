@@ -7,6 +7,8 @@
 }
 body {
     min-width: $width-page-min;
+    background-image: linear-gradient($color1-bg, $color2-bg);
+    max-height: 1127px;
 }
 .vacio {
     background-color: $color-bg;

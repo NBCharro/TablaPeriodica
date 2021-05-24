@@ -1,0 +1,19 @@
+footer {
+    padding: 10px 0 10px 0;
+    color: $footer-text;
+    background: $footer-bg;
+}
+.web {
+    cursor: pointer;
+    &:link {
+        color: $footer-text;
+        text-decoration: none;
+    }
+    &:visited {
+        color: $footer-text;
+    }
+    &:hover {
+        color: red;
+        font-weight: bold;
+    }
+}
